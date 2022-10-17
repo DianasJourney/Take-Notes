@@ -11,7 +11,7 @@ const noteRoutes = require('./routes/noteRoute');
 
 
 app.use(express.static('public'));
-app.use(express.static('db'));
+// app.use(express.static('db'));
 
 //middleware used to read our data
 app.use(express.json());
