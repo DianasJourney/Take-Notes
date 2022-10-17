@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const PORT = 3001
+// const PORT = 3001
 
 const fs = require('fs');
 //api routes
@@ -21,5 +21,5 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api', noteRoutes);
 app.use('/', htmlRoutes);
 
-app.listen(process.env.PORT || 5000, () =>
+app.listen(process.env.PORT, () =>
 {console.log("run")});
