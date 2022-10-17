@@ -68,4 +68,4 @@ noteRoute.post('/notes', (req, res) => {
   }
 });
 
-module.exports = noteRoute
+module.exports = noteRoute;
