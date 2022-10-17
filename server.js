@@ -6,7 +6,7 @@ const PORT = 3001
 const fs = require('fs')
 //api routes
 const htmlRoutes = require('./routes/htmlRoute')
-const noteRoutes = require('./routes/noteRoute')
+const noteRoutes = require('./routes/notechangeRoute')
 
 app.use(express.static('public'))
 // app.use(express.static('db'));
