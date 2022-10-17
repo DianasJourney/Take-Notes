@@ -21,4 +21,4 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api', noteRoutes);
 app.use('/', htmlRoutes);
 
-app.listen(process.env.PORT || 5000);
+app.listen(PORT, () => console.log(`now listening at http://localhost:${PORT}`));
