@@ -36,7 +36,6 @@ const deleteNote = id => {
 const renderActiveNote = () => {
   $saveNoteBtn.hide()
 
-  console.log(activeNote)
 
   if (activeNote.id) {
     $noteTitle.attr('readonly', true)
@@ -85,7 +84,6 @@ const handleNoteDelete = function (event) {
 
 // Sets the activeNote and displays it
 const handleNoteView = function () {
-  console.log(' a noe was clicked')
   activeNote = $(this).data()
   renderActiveNote()
 }
@@ -108,7 +106,6 @@ const handleRenderSaveBtn = function () {
 
 // Render's the list of note titles
 const renderNoteList = notes => {
-  console.log(notes)
   $noteList.empty()
 
   const noteListItems = []
