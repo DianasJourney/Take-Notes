@@ -1,9 +1,10 @@
 const express = require('express');
 const noteRoute = express.Router();
 const fs = require('fs');
-
+//generates random id
 const { v4: uuidv4 } = require('uuid');
 
+//gets the notes from our data
 noteRoute.get('/db', (req, res) => {
   fs.readFile('./db/db.json', 'utf8', (err, data) => {
     if (err) {
@@ -15,6 +16,7 @@ noteRoute.get('/db', (req, res) => {
     }
   })
 });
+
 
 noteRoute.get('/notes', (req, res) => {
   fs.readFile('./db/db.json', 'utf8', (err, data) => {
@@ -28,6 +30,7 @@ noteRoute.get('/notes', (req, res) => {
   })
 });
 
+//if all params are valid then notes will be posted and save the notes into a json file 
 noteRoute.post('/notes', (req, res) => {
   res.json(`${req.method} has been posted!`)
 
