@@ -4,9 +4,9 @@ const app = express()
 const PORT = 3001
 const data = require('./db/db.json')
 const fs = require('fs')
-//generates a random id
-const { v4: uuidv4 } = require('uuid');
 
+//generates a random id
+const { v4: uuidv4 } = require('uuid')
 
 app.get('/api/db', (req, res) => res.json(data))
 
@@ -20,7 +20,7 @@ app.get('/notes', (req, res) =>
 )
 
 app.get('/api/notes', (req, res) => {
-  res.json(`${req.method} test`)
+  res.json(data)
 })
 
 app.post('/api/notes', (req, res) => {
@@ -28,15 +28,15 @@ app.post('/api/notes', (req, res) => {
 
   const { title, text } = req.body
   console.log(title, text)
-  
+
   if (title && text) {
     const newNote = {
       title,
       text,
-      note_id: uuidv4()
+      id: uuidv4()
     }
 
-   const notes = []
+    const notes = []
     notes.push(newNote)
 
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
@@ -54,10 +54,11 @@ app.post('/api/notes', (req, res) => {
             writeErr
               ? console.error(writeErr)
               : console.info('successfully saved note!')
-      )}
-      })
-    }
-      })
+        )
+      }
+    })
+  }
+})
 
 
 
