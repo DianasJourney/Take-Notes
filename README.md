@@ -25,7 +25,7 @@ The following technologies needed will be:
 ## Tests
 When using this application, users will have to head over to the application that is deployed by Heroku. Once users load up the page it's easy as easy 1, 2, 3! Click get started and it will direct users to the note's page where they may enter what they'd like.
 
-Link to deployed application: 
+Link to deployed application: https://take-some-notes-heroku.herokuapp.com/
 
  
 ![oh](https://user-images.githubusercontent.com/109758045/196286059-c0d5ea05-1a46-49bf-adff-9f1794d00c83.png)
